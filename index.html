@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="toDo" ng-controller="mainCtrl">
+<head>
+    <title>ToDo List</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class ="main-container">
+		<h1>Things To Do</h1>
+<form ng-submit="addThings(thingsObj.thingsToDo)">
+   <input class="text-box" type="text" ng-model="thingsObj.thingsToDo" placeholder="Add things to do">
+</form>
+</div>
+
+
+<div>
+	<ul>
+		<li ng-repeat="item in items"> {{item}} - <button class="" ng-click="removeItem(item)">X</button></li>
+	</ul>
+</div>
+
+
+<script src='http://code.angularjs.org/1.1.5/angular.js' type='text/javascript'></script>
+<script src="js/app.js"></script>
+</body>
+</html>
